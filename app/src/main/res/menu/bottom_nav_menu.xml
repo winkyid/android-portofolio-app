@@ -26,9 +26,4 @@
         android:icon="@drawable/ic_folder"
         android:title="Portofolio" />
 
-    <item
-        android:id="@+id/kontakFragment"
-        android:icon="@drawable/ic_contact"
-        android:title="Kontak" />
-
 </menu>

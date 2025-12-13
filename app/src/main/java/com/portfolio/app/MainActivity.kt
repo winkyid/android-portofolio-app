@@ -1,6 +1,7 @@
 package com.portfolio.app
 
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.lifecycleScope
@@ -11,25 +12,28 @@ import com.portfolio.app.databinding.ActivityMainBinding
 import com.portfolio.app.util.ThemeManager
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var themeManager: ThemeManager
+    private lateinit var btnThemeToggle: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
+
         themeManager = ThemeManager(this)
-        
-        val isDarkMode = runBlocking { themeManager.isDarkMode.first() }
-        applyThemeMode(isDarkMode)
-        
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
-        updateThemeIcon(isDarkMode)
+
+        btnThemeToggle = findViewById(R.id.btn_theme_toggle)
+
+        lifecycleScope.launch {
+            val isDarkMode = themeManager.isDarkMode.first()
+            applyThemeMode(isDarkMode)
+            updateThemeIcon(isDarkMode)
+        }
+
         setupNavigation()
         setupThemeToggle()
     }
@@ -44,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupThemeToggle() {
-        binding.btnThemeToggle.setOnClickListener {
+        btnThemeToggle.setOnClickListener {
             lifecycleScope.launch {
                 val currentMode = themeManager.isDarkMode.first()
                 val newMode = !currentMode
@@ -62,12 +66,12 @@ class MainActivity : AppCompatActivity() {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
     }
-    
+
     private fun updateThemeIcon(isDarkMode: Boolean) {
         if (isDarkMode) {
-            binding.btnThemeToggle.setImageResource(R.drawable.ic_light_mode)
+            btnThemeToggle.setImageResource(R.drawable.ic_light_mode)
         } else {
-            binding.btnThemeToggle.setImageResource(R.drawable.ic_dark_mode)
+            btnThemeToggle.setImageResource(R.drawable.ic_dark_mode)
         }
     }
 }

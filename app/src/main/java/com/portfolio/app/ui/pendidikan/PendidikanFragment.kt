@@ -5,16 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.portfolio.app.data.DatabaseHelper
 import com.portfolio.app.data.Pendidikan
 import com.portfolio.app.databinding.FragmentPendidikanBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class PendidikanFragment : Fragment() {
 
     private var _binding: FragmentPendidikanBinding? = null
     private val binding get() = _binding!!
-    
+
     private lateinit var dbHelper: DatabaseHelper
     private lateinit var adapter: PendidikanAdapter
 
@@ -29,7 +33,7 @@ class PendidikanFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         dbHelper = DatabaseHelper(requireContext())
         setupRecyclerView()
         loadData()
@@ -42,8 +46,12 @@ class PendidikanFragment : Fragment() {
     }
 
     private fun loadData() {
-        val pendidikan = dbHelper.getPendidikan()
-        adapter.submitList(pendidikan)
+        lifecycleScope.launch(Dispatchers.IO) {
+            val pendidikan = dbHelper.getPendidikan()
+            withContext(Dispatchers.Main) {
+                adapter.submitList(pendidikan)
+            }
+        }
     }
 
     override fun onDestroyView() {

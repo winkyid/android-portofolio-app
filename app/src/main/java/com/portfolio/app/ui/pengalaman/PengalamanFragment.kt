@@ -5,15 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.portfolio.app.data.DatabaseHelper
 import com.portfolio.app.databinding.FragmentPengalamanBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class PengalamanFragment : Fragment() {
 
     private var _binding: FragmentPengalamanBinding? = null
     private val binding get() = _binding!!
-    
+
     private lateinit var dbHelper: DatabaseHelper
     private lateinit var adapter: PengalamanAdapter
 
@@ -28,7 +32,7 @@ class PengalamanFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         dbHelper = DatabaseHelper(requireContext())
         setupRecyclerView()
         loadData()
@@ -41,8 +45,12 @@ class PengalamanFragment : Fragment() {
     }
 
     private fun loadData() {
-        val pengalaman = dbHelper.getPengalaman()
-        adapter.submitList(pengalaman)
+        lifecycleScope.launch(Dispatchers.IO) {
+            val pengalaman = dbHelper.getPengalaman()
+            withContext(Dispatchers.Main) {
+                adapter.submitList(pengalaman)
+            }
+        }
     }
 
     override fun onDestroyView() {

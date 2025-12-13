@@ -305,6 +305,6 @@ data class Portofolio(
     val judul: String,
     val deskripsi: String,
     val teknologi: String,
-    val image: String,
+    val image: String?,
     val link: String
 )
