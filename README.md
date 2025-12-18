@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Platform-Android-green?style=flat-square" />
   <img src="https://img.shields.io/badge/Language-Kotlin-blue?style=flat-square" />
   <img src="https://img.shields.io/badge/UI-XML%20Layout-orange?style=flat-square" />
-  <img src="[https://img.shields.io/badge/License-Slimmy_V1-purple]" />
+  <img src="https://img.shields.io/badge/License-Slimmy_V1-purple?style=flat-square" />
 </p>
 
 Aplikasi **Profil Diri & Portofolio Android** yang berisi **CV digital**, **riwayat pendidikan**, **pengalaman kerja**, **keahlian**, **portofolio**, hingga **kontak pribadi**. Dibangun menggunakan **Kotlin**, **Navigation Component**, **Fragment-based UI**, **SQLite**, serta **DataStore** untuk pengelolaan tema dan mode gelap/terang.
