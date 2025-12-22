@@ -122,30 +122,29 @@ Atau versi lengkapnya:
 
 ---
 
-## 📄 Lisensi (MIT)
+## 📄 Lisensi
+
+Proyek **Android_Portofolio_App** dilisensikan di bawah **Slimmy License v1.0**.
+
+Lisensi ini memberikan izin luas untuk:
+
+* Menggunakan, menyalin, memodifikasi, dan mendistribusikan aplikasi
+* Membuat dan menyebarkan turunan proyek (derivative works)
+* Penggunaan komersial dan sublicensing
+
+Dengan ketentuan utama:
+
+* **Atribusi ke Slimmy Projects wajib dipertahankan**
+* Perubahan signifikan harus **didokumentasikan dengan jelas**
+* Tidak diperkenankan menggunakan nama, logo, atau merek **Slimmy Projects** untuk promosi tanpa izin tertulis
+* Lisensi mencakup **grant paten** dengan klausul **patent retaliation**
+* Perangkat lunak disediakan **“AS IS” tanpa garansi**
+
+Detail lengkap lisensi dapat dilihat pada file **LICENSE** di repositori ini.
 
 ```
-MIT License
-
-Copyright (c) 2025 winkyid
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Slimmy License v1.0
+Copyright (c) 2025 Slimmy Projects
 ```
 
 ---
