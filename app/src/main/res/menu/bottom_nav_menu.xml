@@ -4,17 +4,17 @@
     <item
         android:id="@+id/tentangFragment"
         android:icon="@drawable/ic_person"
-        android:title="Tentang" />
+        android:title="Profil" />
 
     <item
         android:id="@+id/pendidikanFragment"
         android:icon="@drawable/ic_education"
-        android:title="Pendidikan" />
+        android:title="Edu" />
 
     <item
         android:id="@+id/pengalamanFragment"
         android:icon="@drawable/ic_work"
-        android:title="Pengalaman" />
+        android:title="Kerja" />
 
     <item
         android:id="@+id/skillFragment"
@@ -22,8 +22,8 @@
         android:title="Skills" />
 
     <item
-        android:id="@+id/portofolioFragment"
-        android:icon="@drawable/ic_folder"
-        android:title="Portofolio" />
+        android:id="@+id/kontakFragment"
+        android:icon="@drawable/ic_contact"
+        android:title="Kontak" />
 
 </menu>
