@@ -10,6 +10,14 @@
   <img src="https://img.shields.io/badge/License-Slimmy_V1-purple?style=flat-square" />
 </p>
 
+---
+# Disclaimer
+Branch versi-1.0.2 tidak di update dan tidak sync karena proses pengembangannya dihasilkan di luar repository kami tetapi pengembangan ini dibangun dari baseline versi 1.0 dan di release diluar dari standar struktur kode standar dari repo ini. 
+Repository :
+https://github.com/Ipannnn21/Porto_Van_1NR
+Download (bisa di download melalui tab release v1.0.2-ext-irfan atau melalui dibawah ini):
+not set link
+---
 Aplikasi **Profil Diri & Portofolio Android** yang berisi **CV digital**, **riwayat pendidikan**, **pengalaman kerja**, **keahlian**, **portofolio**, hingga **kontak pribadi**. Dibangun menggunakan **Kotlin**, **Navigation Component**, **Fragment-based UI**, **SQLite**, serta **DataStore** untuk pengelolaan tema dan mode gelap/terang.
 
 ---
