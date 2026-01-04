@@ -3,7 +3,7 @@
 # proguardFiles setting in build.gradle.kts.
 
 # Keep data classes
--keep class com.portfolio.app.data.** { *; }
+-keep class com.slimmy.portoapps.data.** { *; }
 
 # Keep iText PDF
 -keep class com.itextpdf.** { *; }

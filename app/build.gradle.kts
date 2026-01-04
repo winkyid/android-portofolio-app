@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.portfolio.app"
+    namespace = "com.slimmy.portoapps"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.portfolio.app"
+        applicationId = "com.slimmy.portoapps"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 150
+        versionName = "1.5.0"
     }
 
     buildTypes {

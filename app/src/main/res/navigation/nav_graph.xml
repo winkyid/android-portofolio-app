@@ -6,38 +6,105 @@
 
     <fragment
         android:id="@+id/tentangFragment"
-        android:name="com.portfolio.app.ui.tentang.TentangFragment"
+        android:name="com.slimmy.portoapps.ui.tentang.TentangFragment"
         android:label="Tentang Saya">
     </fragment>
 
     <fragment
         android:id="@+id/pendidikanFragment"
-        android:name="com.portfolio.app.ui.pendidikan.PendidikanFragment"
+        android:name="com.slimmy.portoapps.ui.pendidikan.PendidikanFragment"
         android:label="Pendidikan">
     </fragment>
 
     <fragment
         android:id="@+id/pengalamanFragment"
-        android:name="com.portfolio.app.ui.pengalaman.PengalamanFragment"
+        android:name="com.slimmy.portoapps.ui.pengalaman.PengalamanFragment"
         android:label="Pengalaman">
     </fragment>
 
     <fragment
         android:id="@+id/skillFragment"
-        android:name="com.portfolio.app.ui.skill.SkillFragment"
+        android:name="com.slimmy.portoapps.ui.skill.SkillFragment"
         android:label="Skills">
     </fragment>
 
     <fragment
         android:id="@+id/portofolioFragment"
-        android:name="com.portfolio.app.ui.portofolio.PortofolioFragment"
+        android:name="com.slimmy.portoapps.ui.portofolio.PortofolioFragment"
         android:label="Portofolio">
+        <action
+            android:id="@+id/action_portofolioFragment_to_portofolioDetailFragment"
+            app:destination="@id/portofolioDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/portofolioDetailFragment"
+        android:name="com.slimmy.portoapps.ui.portofolio.PortofolioDetailFragment"
+        android:label="Detail Proyek">
+        <argument
+            android:name="portofolioId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_portofolioDetailFragment_to_appWebViewFragment"
+            app:destination="@id/appWebViewFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/appWebViewFragment"
+        android:name="com.slimmy.portoapps.ui.portofolio.AppWebViewFragment"
+        android:label="WebView">
+        <argument
+            android:name="url"
+            app:argType="string" />
     </fragment>
 
     <fragment
         android:id="@+id/kontakFragment"
-        android:name="com.portfolio.app.ui.kontak.KontakFragment"
+        android:name="com.slimmy.portoapps.ui.kontak.KontakFragment"
         android:label="Kontak">
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.slimmy.portoapps.ui.about.AboutAppFragment"
+        android:label="Tentang Aplikasi">
+        <action
+            android:id="@+id/action_aboutAppFragment_to_fileManagerFragment"
+            app:destination="@id/fileManagerFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fileManagerFragment"
+        android:name="com.slimmy.portoapps.ui.filemanager.FileManagerFragment"
+        android:label="File Manager CV">
+        <action
+            android:id="@+id/action_fileManagerFragment_to_pdfViewerFragment"
+            app:destination="@id/pdfViewerFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pdfViewerFragment"
+        android:name="com.slimmy.portoapps.ui.filemanager.PdfViewerFragment"
+        android:label="Preview PDF">
+        <argument
+            android:name="filePath"
+            app:argType="string" />
     </fragment>
 
 </navigation>

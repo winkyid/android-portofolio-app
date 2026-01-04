@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#6366F1</color>
-    <color name="primary_dark">#4F46E5</color>
-    <color name="primary_light">#818CF8</color>
-    <color name="secondary">#0EA5E9</color>
-    <color name="accent">#F59E0B</color>
+    <color name="primary">#007AFF</color>
+    <color name="primary_dark">#0056B3</color>
+    <color name="primary_light">#58A5FF</color>
+    <color name="secondary">#8E8E93</color>
+    <color name="accent">#007AFF</color>
     
     <color name="background_light">#FFFFFF</color>
-    <color name="background_secondary_light">#F8FAFC</color>
+    <color name="background_secondary_light">#F2F2F7</color>
     <color name="surface_light">#FFFFFF</color>
-    <color name="on_surface_light">#1E293B</color>
-    <color name="on_surface_variant_light">#64748B</color>
+    <color name="on_surface_light">#000000</color>
+    <color name="on_surface_variant_light">#666666</color>
     
-    <color name="background_dark">#0F172A</color>
-    <color name="background_secondary_dark">#1E293B</color>
-    <color name="surface_dark">#1E293B</color>
-    <color name="on_surface_dark">#F1F5F9</color>
-    <color name="on_surface_variant_dark">#94A3B8</color>
+    <color name="background_dark">#000000</color>
+    <color name="background_secondary_dark">#1C1C1E</color>
+    <color name="surface_dark">#1C1C1E</color>
+    <color name="on_surface_dark">#FFFFFF</color>
+    <color name="on_surface_variant_dark">#8E8E93</color>
     
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+
+    <!-- Custom Colors for Components -->
+    <color name="box_icon_bg_light">#F2F2F7</color>
+    <color name="box_icon_bg_dark">#2C2C2E</color>
 </resources>

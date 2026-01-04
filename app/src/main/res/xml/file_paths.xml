@@ -3,4 +3,8 @@
     <external-files-path
         name="documents"
         path="Documents/" />
+    <!-- Menambahkan akses ke folder Download Publik agar FileProvider bisa membagikan file CV -->
+    <external-path
+        name="external_downloads"
+        path="Download/" />
 </paths>

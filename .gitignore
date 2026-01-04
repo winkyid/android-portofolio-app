@@ -1,6 +1,7 @@
 # Gradle cache
 .gradle/
 build/
+.gradle
 
 # Android Studio
 .idea/
@@ -12,6 +13,9 @@ local.properties
 # Build outputs
 app/build/
 
+#desain apps image
+.desain_porto_v1.5.0
+
 # OS files
 .DS_Store
-Thumbs.db
+Thumbs.dbdesain_porto_v1.5.0/
