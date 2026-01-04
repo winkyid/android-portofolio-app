@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Diffused Shadow for Glow Effect -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#08000000" />
+        </shape>
+    </item>
+    <item android:left="2dp" android:right="2dp" android:top="2dp" android:bottom="2dp">
+        <shape android:shape="oval">
+            <solid android:color="#0D000000" />
+        </shape>
+    </item>
+    <item android:left="4dp" android:right="4dp" android:top="4dp" android:bottom="4dp">
+        <shape android:shape="oval">
+            <solid android:color="#1A000000" />
+        </shape>
+    </item>
+    <!-- Circle Body -->
+    <item android:left="8dp" android:right="8dp" android:top="8dp" android:bottom="8dp">
+        <shape android:shape="oval">
+            <solid android:color="?attr/colorSurface" />
+            <stroke android:width="2dp" android:color="#007AFF" />
+        </shape>
+    </item>
+</layer-list>
